@@ -11,4 +11,5 @@ service TodoService {
     rpc CreateTodo(CreateTodoRequest) returns (CreateTodoResponse);
     rpc GetAllTodo(google.protobuf.Empty) returns (GetAllResponse);
     rpc DeleteTodo(DeleteTodoRequest) returns (google.protobuf.Empty);
+    rpc UpdateTodo(UpdateTodoRequest) returns (google.protobuf.Empty);
 }
