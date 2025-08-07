@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package todo;
+
+
+message Todo {
+    string id =1;
+    string text =2;
+    bool completed =3;
+}
+
+message CreateTodoRequest {
+    string text = 1;
+}
+
+message CreateTodoResponse {
+    string id = 1;
+}
+
+
+message GetAllResponse{
+    repeated Todo todo =1;
+    int64 count=2;
+}
