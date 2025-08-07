@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-package todo;
+package todo_service;
+option go_package="./todo_service_grpc";
 
 
 message Todo {
@@ -20,5 +21,8 @@ message CreateTodoResponse {
 
 message GetAllResponse{
     repeated Todo todo =1;
-    int64 count=2;
+}
+
+message DeleteTodoRequest {
+    string id = 1;
 }
